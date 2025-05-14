@@ -1,0 +1,83 @@
+.sign-up {
+  width: 384px;
+  background-color: #fff;
+  min-height: 374px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  padding: 48px 32px;
+  margin-top: 60px;
+  margin-bottom: 180px;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  box-shadow: 0 0 7px 5px #00000007;
+  color: #262626;
+  font-family: 'Roboto', sans-serif;
+  p {
+    margin: 0;
+  }
+  h2 {
+    margin: 0;
+    font-family: 'Roboto-S', sans-serif;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__link {
+    color: #1890ff;
+  }
+
+  &__footer--text {
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  &__button {
+    height: 40px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+    background-color: #1890ff;
+    border-radius: 4px;
+    color: #fff;
+  }
+
+  &__agree {
+    border-top: 1px solid #e8e8e8;
+    font-size: 14px;
+    line-height: 22px;
+    color: #595959;
+  }
+
+  &__agree-wrapper {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__agree--text {
+    margin-top: 6px;
+  }
+
+  &__checkbox {
+    margin-top: 8px;
+  }
+}

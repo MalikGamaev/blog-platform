@@ -1,0 +1,25 @@
+body {
+  background-color: #ebeef3;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.input {
+  display: block;
+  height: 40px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 0 12px;
+}
+
+.checkbox {
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.error-text {
+  color: #f5222d;
+  font-size: 14px;
+  line-height: 22px;
+}

@@ -1,0 +1,96 @@
+.article-list {
+  padding: 26px 0;
+  max-width: 938px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+}
+
+.article-item {
+  width: 100%;
+  height: 140px;
+  padding: 15px 16px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.article-item__left {
+  width: 682px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.article-item__title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #1890ff;
+}
+
+.article-item__like--button {
+  width: 16px;
+  height: 16px;
+  background: url('../../../assets/heart.svg') no-repeat center center;
+}
+
+.article-item__liked--button {
+  width: 16px;
+  height: 16px;
+  background: url('../../../assets/liked.svg') no-repeat center center;
+}
+
+.article-item__tags {
+  display: flex;
+  gap: 7px;
+}
+
+.article-item__tag {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 3px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.article-item__right {
+  display: flex;
+  gap: 12px;
+  color: rgba(0, 0, 0, 0.85);
+  text-align: right;
+}
+
+.article-item__like {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.article-item__description {
+  font-size: 12px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.article-item__date {
+  font-size: 12px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.article-item__avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}

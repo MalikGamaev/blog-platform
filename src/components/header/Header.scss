@@ -1,0 +1,93 @@
+.header {
+  height: 80px;
+  padding: 0 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  background-color: #fff;
+  margin: 0;
+}
+
+.header-left {
+  color: rgba(0, 0, 0, 0.85);
+  background-color: transparent;
+  font-size: 18px;
+  line-height: 28px;
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+
+.header-right__create {
+  border-color: #52c41a !important;
+  color: #52c41a !important;
+  transition: 0.5s;
+
+  span {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  flex: 0 0 auto;
+}
+
+.header-right__profile {
+  cursor: pointer;
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+
+.header-right__avatar {
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+}
+
+.header-right__button {
+  height: 51px;
+  width: 109px;
+  transition: 0.5s;
+
+  span {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+.header__sign-in {
+  border-color: #fff !important;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.header__sign-up {
+  border-color: #52c41a !important;
+  color: #52c41a !important;
+}
+
+.logout {
+  border-color: rgba(0, 0, 0, 0.75) !important;
+  color: rgba(0, 0, 0, 0.75) !important;
+}

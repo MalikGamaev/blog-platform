@@ -1,0 +1,128 @@
+.article {
+  margin: 26px 0 64px 0;
+  min-height: 807px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 16px;
+  width: 938px;
+  justify-self: center;
+  background-color: #fff;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+}
+.article__text div {
+  text-align: -webkit-match-parent;
+  font-weight: 400;
+}
+.article__change {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 14px;
+  line-height: 22px;
+}
+.article__change-delete {
+  width: 78px;
+  height: 31.1px;
+  border: 1px solid #f5222d;
+  color: #f5222d;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+.article__change-edit {
+  width: 65.23px;
+  height: 31.1px;
+  border: 1px solid #52c41a;
+  color: #52c41a;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+.article__profile {
+  text-align: right;
+}
+
+.article__header {
+  min-height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.article__left {
+  width: 682px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.article__title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #1890ff;
+}
+
+.article__like--button {
+  width: 16px;
+  height: 16px;
+  background: url('../../../assets/heart.svg') no-repeat center center;
+}
+
+.article__liked--button {
+  width: 16px;
+  height: 16px;
+  background: url('../../../assets/liked.svg') no-repeat center center;
+}
+
+.article__tags {
+  display: flex;
+  gap: 7px;
+}
+
+.article__tag {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 3px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.article__right {
+  display: flex;
+  gap: 12px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.article__like {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.article__description {
+  font-size: 12px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.article__date {
+  font-size: 12px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.article__avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
