@@ -16,6 +16,7 @@ const App = () => {
   const slug = useSelector((state) => state.article.slug)
 
   const dispatch = useDispatch()
+  console.log(localStorage.getItem('currentArticle'))
 
   useEffect(() => {
     if (slug === '') return

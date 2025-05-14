@@ -59,6 +59,10 @@
     background-color: #1890ff;
     border-radius: 4px;
     color: #fff;
+	 transition: 0.5s;
+  &:hover {
+	transform: scale(0.9);
+  }
   }
 
   &__agree {

@@ -77,6 +77,10 @@
     border: 1px solid #f5222d;
     border-radius: 4px;
     color: #f5222d;
+	 transition: 0.5s;
+  &:hover {
+	transform: scale(0.9);
+  }
   }
 
   &__tag--add {
@@ -86,6 +90,10 @@
     border: 1px solid #1890ff;
     border-radius: 4px;
     color: #1890ff;
+	 transition: 0.5s;
+  &:hover {
+	transform: scale(0.9);
+  }
   }
 
   &__tags {
@@ -105,5 +113,9 @@
     vertical-align: middle;
     font-size: 16px;
     line-height: 24px;
+	 transition: 0.5s;
+  &:hover {
+	transform: scale(0.9);
+  }
   }
 }

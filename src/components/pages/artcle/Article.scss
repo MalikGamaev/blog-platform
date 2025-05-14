@@ -35,6 +35,10 @@
     border-radius: 5px;
     text-align: center;
     vertical-align: middle;
+	 transition: 0.5s;
+  &:hover {
+	transform: scale(0.9);
+  }
   }
 
   &__change-edit {
@@ -46,6 +50,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+	 transition: 0.5s;
+  &:hover {
+	transform: scale(0.9);
+  }
   }
 
   &__profile {
@@ -80,12 +88,20 @@
   width: 16px;
   height: 16px;
   background: url('../../../assets/heart.svg') no-repeat center center;
+  transition: 0.5s;
+  &:hover {
+	transform: scale(0.9);
+  }
 }
 
 .article__liked--button {
   width: 16px;
   height: 16px;
   background: url('../../../assets/liked.svg') no-repeat center center;
+  transition: 0.5s;
+  &:hover {
+	transform: scale(0.9);
+  }
 }
 
 .article__tags {

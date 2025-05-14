@@ -21,7 +21,7 @@ const Article = () => {
   const user = useSelector((state) => state.user.currentUser) || JSON.parse(localStorage.getItem('user'))
 
   const data = currentArticle ? currentArticle : JSON.parse(localStorage.getItem('currentArticle'))
-  const { title, slug, description, body, tagList, createdAt, author, favoritesCount } = data
+  const { title, slug, description, body, tagList, createdAt, author, favorited, favoritesCount } = data
   const flagArticle = useSelector((state) => state.article.successArticle)
 
   const confirm = async () => {
@@ -30,11 +30,9 @@ const Article = () => {
 
   const onHandlerLiked = async () => {
     if (!user) return
-    if (localStorage.getItem(slug) === 'true') {
-      localStorage.setItem(slug, 'false')
+    if (favorited) {
       await dispatch(fetchDeleteFavorited(slug))
     } else {
-      localStorage.setItem(slug, 'true')
       await dispatch(fetchAddFavorited(slug))
     }
   }
@@ -57,7 +55,7 @@ const Article = () => {
               <button
                 onClick={onHandlerLiked}
                 className={
-                  localStorage.getItem(slug) === 'true' && user ? 'article__liked--button' : 'article__like--button'
+                  favorited && user ? 'article__liked--button' : 'article__like--button'
                 }
               ></button>
               {favoritesCount}

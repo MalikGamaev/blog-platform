@@ -21,11 +21,9 @@ const ArticleItem = ({ data }) => {
 
   const onHandlerLiked = async () => {
     if (!user) return
-    if (localStorage.getItem(data.slug) === 'true') {
-      localStorage.setItem(data.slug, 'false')
+    if (data.favorited) {
       await dispatch(fetchDeleteFavorited(data.slug))
     } else {
-      localStorage.setItem(data.slug, 'true')
       await dispatch(fetchAddFavorited(data.slug))
     }
   }
@@ -34,14 +32,14 @@ const ArticleItem = ({ data }) => {
     <li className="article-item">
       <div className="article-item__left">
         <div className="article-item__title">
-          <Link onClick={onHandlerArticle} to={`/articles/${data.slug}`}>
+          <Link className='article-item__title-text' onClick={onHandlerArticle} to={`/articles/${data.slug}`}>
             {normalTitle(data.title)}
           </Link>
           <div className="article-item__like">
             <button
               onClick={onHandlerLiked}
               className={
-                localStorage.getItem(data.slug) === 'true' && user
+                data.favorited && user
                   ? 'article-item__liked--button'
                   : 'article-item__like--button'
               }
