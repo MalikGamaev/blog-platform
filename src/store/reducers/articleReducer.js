@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 
-export const fetchGetArticles = createAsyncThunk('articles/fetchGetArticles', async (offset = 0) => {
+export const fetchGetArticles = createAsyncThunk('articles/fetchGetArticles', async (offset = 0, {getState}) => {
   try {
     const response = await axios.get(`https://blog-platform.kata.academy/api/articles?offset=${offset}&limit=10`)
     return response.data
