@@ -1,26 +1,30 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 
-export const fetchGetArticles = createAsyncThunk('articles/fetchGetArticles', async (offset = 0, {getState}) => {
+export const fetchGetArticles = createAsyncThunk('articles/fetchGetArticles', async (offset = 0, { getState }) => {
   try {
     const response = await axios.get(`https://blog-platform.kata.academy/api/articles?offset=${offset}&limit=10`, {
-		headers: {
-			Authorization: localStorage.getItem('user') && `Bearer ${getState().token || JSON.parse(localStorage.getItem('user')).token}`
-		}
-	 })
+      headers: {
+        Authorization:
+          localStorage.getItem('user') &&
+          `Bearer ${getState().token || JSON.parse(localStorage.getItem('user')).token}`,
+      },
+    })
     return response.data
   } catch (error) {
     console.error(error)
   }
 })
 
-export const fetchGetArticle = createAsyncThunk('articles/fetchGetArticle', async (slug, {getState}) => {
+export const fetchGetArticle = createAsyncThunk('articles/fetchGetArticle', async (slug, { getState }) => {
   try {
     const response = await axios.get(`https://blog-platform.kata.academy/api/articles/${slug}`, {
-		headers: {
-			Authorization: localStorage.getItem('user') && `Bearer ${getState().token || JSON.parse(localStorage.getItem('user')).token}`
-		}
-	 })
+      headers: {
+        Authorization:
+          localStorage.getItem('user') &&
+          `Bearer ${getState().token || JSON.parse(localStorage.getItem('user')).token}`,
+      },
+    })
     return response.data
   } catch (error) {
     console.error(error)

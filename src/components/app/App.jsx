@@ -11,6 +11,7 @@ import './App.scss'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchGetArticle, fetchGetArticles } from '../../store/reducers/articleReducer'
+import '@ant-design/v5-patch-for-react-19'
 
 const App = () => {
   const slug = useSelector((state) => state.article.slug)

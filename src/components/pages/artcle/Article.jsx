@@ -12,6 +12,7 @@ import {
   fetchDeleteArticle,
   fetchDeleteFavorited,
 } from '../../../store/reducers/articleReducer'
+import {v4 as uuidv4 } from 'uuid'
 
 const Article = () => {
   const navigate = useNavigate()
@@ -54,9 +55,7 @@ const Article = () => {
             <div className="article__like">
               <button
                 onClick={onHandlerLiked}
-                className={
-                  favorited && user ? 'article__liked--button' : 'article__like--button'
-                }
+                className={favorited && user ? 'article__liked--button' : 'article__like--button'}
               ></button>
               {favoritesCount}
             </div>
@@ -64,9 +63,9 @@ const Article = () => {
           <div className="article__tags">
             {tagList.length > 0 &&
               tagList.map((tag) => {
-                if (tag !== '') {
-                  return <button className="article__tag">{normalTag(tag)}</button>
-                }
+                if (tag === '' || tag === '\s' || !/\w/.test(tag) || tag === null) return 
+                return <button key={uuidv4()} className="article__tag">{normalTag(tag)}</button>
+                
               })}
           </div>
           <div className="article__description">{description}</div>

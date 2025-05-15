@@ -9,6 +9,51 @@
   letter-spacing: 0%;
   background-color: #fff;
   margin: 0;
+
+
+  @media (max-width: 500px) {
+	padding: 0 8px;
+
+	.header-right {
+		gap: 6px;
+
+		&__button {
+			height: 41px;
+			width: 89px;
+		}
+		
+		&__profile {
+			gap: 4px;
+		}
+
+		&__create {
+			width: 80px;
+			span {
+				font-size: 11px;
+				
+			}
+		}
+
+		&__avatar {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	.header-left {
+		font-size: 14px;
+		line-height: 22px;
+	}
+
+	.logout {
+		width: 65px;
+		height: 35px;
+		font-size: 13px;
+		span {
+			font-size: 14px;
+		}
+	}
+  }
 }
 
 .header-left {
