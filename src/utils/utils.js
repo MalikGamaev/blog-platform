@@ -1,6 +1,6 @@
 export const normalTitle = (title) => {
   const changeTitle = title.split('')
-  if (changeTitle.length > 40) return changeTitle.slice(0, 39).join('') + '...'
+  if (changeTitle.length > 35) return changeTitle.slice(0, 34).join('') + '...'
   return title
 }
 
