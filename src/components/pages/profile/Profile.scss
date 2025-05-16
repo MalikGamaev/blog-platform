@@ -5,9 +5,7 @@
   border: 1px solid #d9d9d9;
   border-radius: 6px;
   padding: 48px 32px;
-  margin-top: 60px;
-  margin-bottom: 180px;
-  justify-self: center;
+  margin: 60px auto 180px auto;
   display: flex;
   flex-direction: column;
   gap: 21px;
@@ -42,9 +40,9 @@
     font-size: 16px;
     line-height: 24px;
     padding: 8px 16px;
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #1890ff;
     border-radius: 4px;
     color: #fff;
@@ -55,19 +53,19 @@
   }
 
   @media (max-width: 500px) {
-	width: 350px;
-	padding: 20px 15px;
-	gap: 15px;
-	h2 {
-		font-size: 16px;
-	}
-	
-	&__button {
-		width: 200px;
-		height: 30px;
-	}	
-	&__data {
-		gap: 7px;
-	}
+    width: 350px;
+    padding: 20px 15px;
+    gap: 15px;
+    h2 {
+      font-size: 16px;
+    }
+
+    &__button {
+      width: 200px;
+      height: 30px;
+    }
+    &__data {
+      gap: 7px;
+    }
   }
 }

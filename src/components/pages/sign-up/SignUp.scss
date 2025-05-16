@@ -5,9 +5,7 @@
   border: 1px solid #d9d9d9;
   border-radius: 6px;
   padding: 48px 32px;
-  margin-top: 60px;
-  margin-bottom: 180px;
-  justify-self: center;
+  margin: 60px auto 180px auto;
   display: flex;
   flex-direction: column;
   gap: 21px;
@@ -86,11 +84,11 @@
   }
 
   @media (max-width: 500px) {
-	width: 350px;
-	margin-top: 30px;
-	padding: 35px 22px;
-	&__data {
-		gap: 8px;
-	}
+    width: 350px;
+    margin-top: 30px;
+    padding: 35px 22px;
+    &__data {
+      gap: 8px;
+    }
   }
 }

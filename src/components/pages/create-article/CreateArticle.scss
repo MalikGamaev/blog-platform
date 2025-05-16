@@ -1,8 +1,7 @@
 .create-article {
   background-color: #fff;
   width: 938px;
-  justify-self: center;
-  margin: 26px 0 162px 0;
+  margin: 26px auto 162px auto;
   border: 1px solid #d9d9d9;
   border-radius: 6px;
   box-shadow: 0 0 7px 5px #00000007;
@@ -50,8 +49,8 @@
   }
 
   &__text--textarea {
-    resize: none ;
-    height: 168px ;
+    resize: none;
+    height: 168px;
     border: 1px solid #d9d9d9;
     padding: 7px 12px;
     border-radius: 5px;
@@ -109,9 +108,9 @@
     padding: 8px 16px;
     background-color: #1890ff;
     color: #fff;
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 16px;
     line-height: 24px;
     transition: 0.5s;
@@ -121,33 +120,32 @@
   }
 
   @media (max-width: 957px) {
-	width: 650px;
-
+    width: 650px;
   }
   @media (max-width: 672px) {
-	width: 350px;
-	padding: 20px 15px;
-	gap: 10px;
-	h2 {
-		font-size: 16px;
-	}
-	&__text--textarea {
-		height: 90px;
-	}
-	&__tag--input {
-		width: 150px !important;
-	 }
-	&__tag--delete {
-		width: 70px;
-		height: 30px; 
-	}
-	&__tag--add {
-		width: 70px;
-		height: 30px; 
-	}
-	&__button {
-		width: 200px;
-		height: 30px;
-	}	
+    width: 350px;
+    padding: 20px 15px;
+    gap: 10px;
+    h2 {
+      font-size: 16px;
+    }
+    &__text--textarea {
+      height: 90px;
+    }
+    &__tag--input {
+      width: 150px !important;
+    }
+    &__tag--delete {
+      width: 70px;
+      height: 30px;
+    }
+    &__tag--add {
+      width: 70px;
+      height: 30px;
+    }
+    &__button {
+      width: 200px;
+      height: 30px;
+    }
   }
 }

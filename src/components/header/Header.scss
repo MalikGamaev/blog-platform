@@ -12,7 +12,7 @@
 
   @media (max-width: 500px) {
     padding: 0 8px;
-	 height: 60px;
+    height: 60px;
 
     .header-right {
       gap: 4px;
@@ -24,7 +24,7 @@
 
       &__profile {
         gap: 4px;
-		  font-size: 11px;
+        font-size: 11px;
       }
 
       &__create {
@@ -40,17 +40,17 @@
       }
     }
 
-	 .header__sign-in {
-		span {
-			font-size: 13px;
-		}
-	 }
+    .header__sign-in {
+      span {
+        font-size: 13px;
+      }
+    }
 
-	 .header__sign-up {
-		span {
-			font-size: 13px;
-		}
-	 }
+    .header__sign-up {
+      span {
+        font-size: 13px;
+      }
+    }
     .header-left {
       font-size: 14px;
       line-height: 22px;

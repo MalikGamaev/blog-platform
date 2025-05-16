@@ -82,16 +82,8 @@ const Article = () => {
           {user.username === author.username && (
             <div className="article__change">
               <Popconfirm
-				    title={
-						<div className='article__poptext'>
-						  Delete the task
-						</div>
-					 }
-                description={
-						<div className='article__poptext'>
-						  Are you sure to delete this article?
-						</div>
-					 }
+                title={<div className="article__poptext">Delete the task</div>}
+                description={<div className="article__poptext">Are you sure to delete this article?</div>}
                 onConfirm={confirm}
                 okText="Yes"
                 cancelText="No"

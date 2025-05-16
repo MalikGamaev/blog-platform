@@ -5,8 +5,7 @@
   border: 1px solid #d9d9d9;
   border-radius: 6px;
   padding: 48px 32px;
-  margin-top: 60px;
-  justify-self: center;
+  margin: 60px auto 0 auto;
   display: flex;
   flex-direction: column;
   gap: 21px;
@@ -71,6 +70,6 @@
   }
 
   @media (max-width: 500px) {
-	width: 350px;
-  }	
+    width: 350px;
+  }
 }
