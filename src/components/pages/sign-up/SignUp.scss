@@ -84,4 +84,13 @@
   &__checkbox {
     margin-top: 8px;
   }
+
+  @media (max-width: 500px) {
+	width: 350px;
+	margin-top: 30px;
+	padding: 35px 22px;
+	&__data {
+		gap: 8px;
+	}
+  }
 }

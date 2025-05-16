@@ -13,6 +13,7 @@ import {
   deleteCreateTag,
   fetchCreateArticle,
 } from '../../../store/reducers/articleReducer'
+import { v4 as uuidv4 } from 'uuid'
 
 const CreateArticle = () => {
   const dispatch = useDispatch()
@@ -109,7 +110,7 @@ const CreateArticle = () => {
         <div className="create-article__tag-list">
           {tags.length > 0 &&
             tags.map((tag) => (
-              <div className="create-article__tag">
+              <div key={uuidv4()} className="create-article__tag">
                 <input disabled value={tag} className="input create-article__tag--input" type="text" />
                 <button type="button" onClick={() => onDeleteTag(tag)} className="create-article__tag--delete">
                   Delete

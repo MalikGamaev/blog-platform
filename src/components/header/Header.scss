@@ -10,49 +10,60 @@
   background-color: #fff;
   margin: 0;
 
-
   @media (max-width: 500px) {
-	padding: 0 8px;
+    padding: 0 8px;
+	 height: 60px;
 
-	.header-right {
-		gap: 6px;
+    .header-right {
+      gap: 4px;
 
-		&__button {
-			height: 41px;
-			width: 89px;
-		}
-		
-		&__profile {
-			gap: 4px;
-		}
+      &__button {
+        height: 30px;
+        width: 70px;
+      }
 
-		&__create {
-			width: 80px;
-			span {
-				font-size: 11px;
-				
-			}
-		}
+      &__profile {
+        gap: 4px;
+		  font-size: 11px;
+      }
 
-		&__avatar {
-			width: 40px;
-			height: 40px;
-		}
-	}
+      &__create {
+        width: 80px;
+        span {
+          font-size: 11px;
+        }
+      }
 
-	.header-left {
-		font-size: 14px;
-		line-height: 22px;
-	}
+      &__avatar {
+        width: 40px;
+        height: 40px;
+      }
+    }
 
-	.logout {
-		width: 65px;
-		height: 35px;
-		font-size: 13px;
+	 .header__sign-in {
 		span {
-			font-size: 14px;
+			font-size: 13px;
 		}
-	}
+	 }
+
+	 .header__sign-up {
+		span {
+			font-size: 13px;
+		}
+	 }
+    .header-left {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .logout {
+      width: 65px;
+      height: 35px;
+      font-size: 13px;
+      span {
+        font-size: 14px;
+      }
+    }
   }
 }
 

@@ -50,8 +50,8 @@
   }
 
   &__text--textarea {
-    resize: none !important;
-    min-height: 168px !important;
+    resize: none ;
+    height: 168px ;
     border: 1px solid #d9d9d9;
     padding: 7px 12px;
     border-radius: 5px;
@@ -109,13 +109,45 @@
     padding: 8px 16px;
     background-color: #1890ff;
     color: #fff;
-    text-align: center;
-    vertical-align: middle;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
     font-size: 16px;
     line-height: 24px;
     transition: 0.5s;
     &:hover {
       transform: scale(0.9);
     }
+  }
+
+  @media (max-width: 957px) {
+	width: 650px;
+
+  }
+  @media (max-width: 672px) {
+	width: 350px;
+	padding: 20px 15px;
+	gap: 10px;
+	h2 {
+		font-size: 16px;
+	}
+	&__text--textarea {
+		height: 90px;
+	}
+	&__tag--input {
+		width: 150px !important;
+	 }
+	&__tag--delete {
+		width: 70px;
+		height: 30px; 
+	}
+	&__tag--add {
+		width: 70px;
+		height: 30px; 
+	}
+	&__button {
+		width: 200px;
+		height: 30px;
+	}	
   }
 }

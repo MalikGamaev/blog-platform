@@ -12,7 +12,7 @@ import {
   fetchDeleteArticle,
   fetchDeleteFavorited,
 } from '../../../store/reducers/articleReducer'
-import {v4 as uuidv4 } from 'uuid'
+import { v4 as uuidv4 } from 'uuid'
 
 const Article = () => {
   const navigate = useNavigate()
@@ -63,9 +63,12 @@ const Article = () => {
           <div className="article__tags">
             {tagList.length > 0 &&
               tagList.map((tag) => {
-                if (tag === '' || tag === '\s' || !/\w/.test(tag) || tag === null) return 
-                return <button key={uuidv4()} className="article__tag">{normalTag(tag)}</button>
-                
+                if (tag === '' || tag === '\s' || !/\w/.test(tag) || tag === null) return
+                return (
+                  <button key={uuidv4()} className="article__tag">
+                    {normalTag(tag)}
+                  </button>
+                )
               })}
           </div>
           <div className="article__description">{description}</div>
@@ -79,8 +82,16 @@ const Article = () => {
           {user.username === author.username && (
             <div className="article__change">
               <Popconfirm
-                title="Delete the task"
-                description="Are you sure to delete this article?"
+				    title={
+						<div className='article__poptext'>
+						  Delete the task
+						</div>
+					 }
+                description={
+						<div className='article__poptext'>
+						  Are you sure to delete this article?
+						</div>
+					 }
                 onConfirm={confirm}
                 okText="Yes"
                 cancelText="No"
