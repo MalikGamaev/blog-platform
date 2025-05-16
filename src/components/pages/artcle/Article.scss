@@ -10,10 +10,7 @@
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
 
   &__text {
-    div {
-      text-align: -webkit-match-parent;
-      font-weight: 400;
-    }
+  		word-wrap: break-word;
   }
 
   &__change {

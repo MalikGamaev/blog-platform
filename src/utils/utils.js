@@ -18,6 +18,6 @@ export const normalTag = (tag) => {
 
 export const normalDescription = (description) => {
   const changeDescription = description.split('')
-  if (changeDescription.length > 150) return changeDescription.slice(0, 149).join('') + '...'
+  if (changeDescription.length > 120) return changeDescription.slice(0, 119).join('') + '...'
   return description
 }

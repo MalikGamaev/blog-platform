@@ -79,7 +79,7 @@ const Article = () => {
             <div className="article__date">{format(createdAt, 'MMMM d, y')}</div>
           </div>
           <img src={author.image} alt="avatar" className="article__avatar" />
-          {user.username === author.username && (
+          {user?.username === author.username && (
             <div className="article__change">
               <Popconfirm
                 title={<div className="article__poptext">Delete the task</div>}
