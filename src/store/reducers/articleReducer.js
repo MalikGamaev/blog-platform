@@ -171,6 +171,21 @@ const articleReducer = createSlice({
     changeTag: (state, action) => {
       state.currentTag = action.payload
     },
+	 changeCreateTag: (state, action) => {
+		const { idx, value } = action.payload;
+  		state.createTags = [
+    ...state.createTags.slice(0, idx), 
+    value, 
+    ...state.createTags.slice(idx + 1), 
+  ];
+	 },
+	 changeEditTag: (state, action) => {
+		const { idx, value } = action.payload;
+  		state.tagList = [
+    ...state.tagList.slice(0, idx), 
+    value, 
+    ...state.tagList.slice(idx + 1), 
+	 ]},
     changeFlagCreate: (state) => {
       state.successArticle = false
     },
@@ -187,7 +202,7 @@ const articleReducer = createSlice({
     builder.addCase(fetchGetArticle.fulfilled, (state, action) => {
       state.currentArticle = action.payload.article
       localStorage.setItem('currentArticle', JSON.stringify(action.payload.article))
-      state.tagList = [...state.tagList, ...JSON.parse(localStorage.getItem('currentArticle')).tagList]
+      state.tagList = [...JSON.parse(localStorage.getItem('currentArticle')).tagList]
     })
     builder.addCase(fetchCreateArticle.fulfilled, (state) => {
       state.successArticle = true
@@ -228,5 +243,7 @@ export const {
   clearTag,
   changeTag,
   changeFlagCreate,
+  changeCreateTag,
+  changeEditTag,
 } = articleReducer.actions
 export default articleReducer.reducer

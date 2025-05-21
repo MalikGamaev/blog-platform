@@ -11,6 +11,7 @@ export const normalText = (text) => {
 }
 
 export const normalTag = (tag) => {
+	debugger
   const changeTag = tag.split('')
   if (changeTag.length > 25) return changeTag.slice(0, 24).join('') + '...'
   return tag

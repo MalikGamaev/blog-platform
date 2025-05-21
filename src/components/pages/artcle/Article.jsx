@@ -24,6 +24,7 @@ const Article = () => {
   const data = currentArticle ? currentArticle : JSON.parse(localStorage.getItem('currentArticle'))
   const { title, slug, description, body, tagList, createdAt, author, favorited, favoritesCount } = data
   const flagArticle = useSelector((state) => state.article.successArticle)
+  debugger
 
   const confirm = async () => {
     await dispatch(fetchDeleteArticle(slug))
@@ -63,7 +64,7 @@ const Article = () => {
           <div className="article__tags">
             {tagList.length > 0 &&
               tagList.map((tag) => {
-                if (tag === '' || tag === '\s' || !/\w/.test(tag) || tag === null) return
+                if (tag === '' || tag === null) return
                 return (
                   <button key={uuidv4()} className="article__tag">
                     {normalTag(tag)}

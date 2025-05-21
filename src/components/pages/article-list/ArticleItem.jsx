@@ -47,7 +47,7 @@ const ArticleItem = ({ data }) => {
         <div className="article-item__tags">
           {data.tagList.length > 0 &&
             data.tagList.map((tag) => {
-              if (tag === '' || tag === '\s' || !/\w/.test(tag) || tag === null) return
+              if (tag === '' || tag === null) return
               return (
                 <button key={uuidv4()} className="article-item__tag">
                   {normalTag(tag)}

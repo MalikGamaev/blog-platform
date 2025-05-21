@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import {
   addTag,
+  changeEditTag,
   changeFlagCreate,
   changeTag,
   clearTag,
@@ -28,6 +29,8 @@ const EditArticle = () => {
     useSelector((state) => state.article.currentArticle) || localStorage.getItem('currentArticle')
       ? JSON.parse(localStorage.getItem('currentArticle'))
       : null
+
+	
   const { slug } = article
   const {
     register,
@@ -62,6 +65,10 @@ const EditArticle = () => {
     dispatch(changeTag(e.target.value))
   }
 
+  const onChangeEditTag = (e, index) => {
+	dispatch(changeEditTag({value: e.target.value, idx: index}))
+  }
+
   useEffect(() => {
     if (flagCreate) {
       navigate('/')
@@ -73,6 +80,8 @@ const EditArticle = () => {
   useEffect(() => {
     if (!user) navigate('/sign-in')
   }, [])
+
+  
   return (
     <form onSubmit={handleSubmit(onHandlerSubmit)} className="edit-article">
       <h2>Edit article</h2>
@@ -118,9 +127,9 @@ const EditArticle = () => {
         <span className="edit-article__label">Tags</span>
         <div className="edit-article__tag-list">
           {tags.length > 0 &&
-            tags.map((tag) => (
-              <div key={uuidv4()} className="edit-article__tag">
-                <input disabled value={tag} className="input edit-article__tag--input" type="text" />
+            tags.map((tag, index) => (
+              <div key={index} className="edit-article__tag">
+                <input onChange={(e) => onChangeEditTag(e,index)} value={tag} className="input edit-article__tag--input" type="text" />
                 <button type="button" onClick={() => onDeleteTag(tag)} className="edit-article__tag--delete">
                   Delete
                 </button>

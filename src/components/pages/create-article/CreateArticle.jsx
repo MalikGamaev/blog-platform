@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { memo, useCallback, useEffect, useRef } from 'react'
 import './CreateArticle.scss'
 import { Input } from 'antd'
 import TextArea from 'antd/es/input/TextArea'
@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import {
   addCreateTag,
+  changeCreateTag,
   changeFlagCreate,
   changeTag,
   clearTag,
@@ -32,6 +33,7 @@ const CreateArticle = () => {
     reset,
   } = useForm()
 
+
   const onHandlerSubmit = async (data) => {
     await dispatch(fetchCreateArticle({ ...data, tags }))
   }
@@ -52,6 +54,10 @@ const CreateArticle = () => {
     dispatch(changeTag(e.target.value))
   }
 
+  const onChangeCreateTag = (e, index) => {
+    dispatch(changeCreateTag({ value: e.target.value, idx: index }));
+  };
+ 
   useEffect(() => {
     if (flagCreate) {
       navigate('/')
@@ -109,9 +115,9 @@ const CreateArticle = () => {
         <span className="create-article__label">Tags</span>
         <div className="create-article__tag-list">
           {tags.length > 0 &&
-            tags.map((tag) => (
-              <div key={uuidv4()} className="create-article__tag">
-                <input disabled value={tag} className="input create-article__tag--input" type="text" />
+            tags.map((tag, index) => (
+              <div key={index} className="create-article__tag">
+                <input onChange={(e) => onChangeCreateTag(e, index)} value={tag} className="input create-article__tag--input" type="text" />
                 <button type="button" onClick={() => onDeleteTag(tag)} className="create-article__tag--delete">
                   Delete
                 </button>
@@ -141,4 +147,4 @@ const CreateArticle = () => {
   )
 }
 
-export default CreateArticle
+export default memo(CreateArticle) 

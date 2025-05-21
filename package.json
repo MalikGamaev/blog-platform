@@ -21,6 +21,7 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-react": "^7.37.4",
+    "lodash": "^4.17.21",
     "markdown-to-jsx": "^7.7.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
